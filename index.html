@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的音频</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            margin-bottom: 1.5rem;
+        }
+        audio {
+            width: 100%;
+            max-width: 400px;
+            margin-top: 1rem;
+            border-radius: 25px;
+        }
+        audio::-webkit-media-controls-panel {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>请扫描二维码收听</h1>
+        <!-- 重要：将下面的 "my-audio.mp3" 替换成你实际上传的音频文件名 -->
+        <audio controls autoplay>
+            <source src="my audio.mp3" type="audio/mpeg">
+            您的浏览器不支持音频播放功能。
+        </audio>
+        <p>如果音频没有自动播放，请点击上面的播放按钮。</p>
+    </div>
+</body>
+</html>
